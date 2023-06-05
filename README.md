@@ -1,6 +1,6 @@
 # ********* hishab-game-app **************
 
-## Technology Stack 
+## Technology Stack :
 - Java 17
 - Spring Boot 3
 - Maven 3.XX
@@ -10,15 +10,16 @@
 - Jenkins
 - GitHub
 
-## Maven:
+## Maven :
 - mvn clean install 
 - mvn clean package 
 - ./mvnw install -DskipTests 
 - ./mvnw spring-boot:run 
 
-## Docker:
+## Docker :
 ## Build Command :
 - docker build -t hishab/hishab-game-app .
+
 ## Run Command :
 - docker run -p 8000:8000 hishab/hishab-game-app
 
