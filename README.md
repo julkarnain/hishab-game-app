@@ -1,5 +1,15 @@
 # ********* hishab-game-app **************
 
+## Technology Stack 
+- Java 17
+- Spring Boot 3
+- Maven 3.XX
+- Swagger 3
+- JUnit5 
+- Docker 
+- Jenkins
+- GitHub
+
 ## Maven:
 - mvn clean install 
 - mvn clean package 
