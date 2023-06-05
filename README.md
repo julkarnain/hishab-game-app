@@ -21,6 +21,9 @@
 - ./mvnw install -DskipTests 
 - ./mvnw spring-boot:run 
 
+- mvn clean package -Pdev
+- mvn clean package -Ptest
+
 ## Docker :
 ## Build Command :
 - docker build -t hishab/hishab-game-app .
