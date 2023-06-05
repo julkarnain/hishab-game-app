@@ -1,0 +1,147 @@
+{
+	"info": {
+		"_postman_id": "1f186ad7-49c4-49ee-8664-4f608efcae07",
+		"name": "Hishab",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "3654213"
+	},
+	"item": [
+		{
+			"name": "FetchDice",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8000/api/1.0/dice"
+			},
+			"response": []
+		},
+		{
+			"name": "AddPlayer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"playerId\":1,\"name\":\"Julkar\",\"age\":\"30\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/api/1.0/player/add"
+			},
+			"response": []
+		},
+		{
+			"name": "AddPlayer_409_ Conflict",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"playerId\":1,\"name\":\"Julkar\",\"age\":\"30\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/api/1.0/player/add"
+			},
+			"response": []
+		},
+		{
+			"name": "AddPlayer_400_BadRequest",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"playerId\":1,\"name\":\"Julkar\",\"age\":30\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/api/1.0/player/add"
+			},
+			"response": []
+		},
+		{
+			"name": "AddPlayer_405_MethodNotAllowed",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"playerId\":1,\"name\":\"Julkar\",\"age\":\"30\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/api/1.0/player/add"
+			},
+			"response": []
+		},
+		{
+			"name": "GetPlayers",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "GetPlayers_404_Not_Found",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8000/api/1.0/player/abc"
+			},
+			"response": []
+		},
+		{
+			"name": "GameStart",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8000/api/1.0/game/start/gameId=1"
+			},
+			"response": []
+		},
+		{
+			"name": "ScoreBoard",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8000/api/1.0/game/current-scoreboard"
+			},
+			"response": []
+		},
+		{
+			"name": "ScoreBoard_204_No_Content",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8000/api/1.0/game/current-scoreboard"
+			},
+			"response": []
+		},
+		{
+			"name": "Swagger2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8000/api-docs"
+			},
+			"response": []
+		}
+	]
+}

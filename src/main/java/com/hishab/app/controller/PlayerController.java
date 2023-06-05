@@ -26,7 +26,7 @@ import lombok.extern.slf4j.Slf4j;
 public class PlayerController {
 
 	@Autowired
-	PlayerService playerService;
+	private PlayerService playerService;
 
 	@PostMapping(value = "/add")
 	public ResponseEntity<Player> addPlayer(@RequestBody Player player) throws PlayerAlreadyExistsException {

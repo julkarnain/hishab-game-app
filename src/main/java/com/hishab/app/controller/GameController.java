@@ -30,7 +30,7 @@ import lombok.extern.slf4j.Slf4j;
 public class GameController {
 
 	@Autowired
-	GameService gameService;
+	private GameService gameService;
 
 	private final DiceService diceService;
 
@@ -52,14 +52,6 @@ public class GameController {
 					CustomGameHandler customGameHandler = new CustomGameHandler(diceService,gameId);
 					Thread thread = new Thread(customGameHandler);
 					thread.start();
-					
-					/*
-					 * if(!ApplicationConstants.GAME_RUNNING_FlAG) { //thread.interrupt();
-					 * responseStatus.setStatusType("Normal"); responseStatus.setStatusCode("N001");
-					 * responseStatus.setStatusMessage("Game is finished successfully");
-					 * 
-					 * log.info("Game is finished. Please start again........."); }
-					 */
 
 					responseStatus.setStatusType("Normal");
 					responseStatus.setStatusCode("N001");
