@@ -33,7 +33,7 @@ pipeline {
         stage('Docker Build') {
             steps {
                 script {
-                    docker.build("hishab/hishab-game-app:latest")
+                    docker.build("elixirsoft/hishab-game-app:latest")
                 }
             }
         }
