@@ -41,8 +41,8 @@ pipeline {
             steps {
                 script {
                     docker.withRegistry('https://registry.hub.docker.com', 'docker_credential') {
-                        docker.image("hishab/hishab-game-app:latest").push()
-                        docker.image("hishab/hishab-game-app:latest").push("latest")
+                        docker.image("elixirsoft/hishab-game-app:latest").push()
+                        docker.image("elixirsoft/hishab-game-app:latest").push("latest")
                     }
                 }
             }
