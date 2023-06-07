@@ -15,7 +15,7 @@ pipeline {
         webHook_url = "myWebHookURL"
     }
     stages {
-   		 stage('checkout') {
+   		/* stage('checkout') {
             steps {
                 script {
                     git branch:"${branch_name}",
@@ -24,7 +24,7 @@ pipeline {
                     commitId = sh (script: 'git rev-parse --short HEAD ${GIT_COMMIT}', returnStdout: true).trim()
 }
             }
-        }
+        }*/
         stage ('Build') {
             steps {
                 sh 'mvn clean package'
